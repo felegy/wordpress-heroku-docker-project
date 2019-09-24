@@ -25,16 +25,24 @@
     "ext-redis": "*",
     "ext-mbstring": "*",
     "ext-soap": "*",
-    "johnpbloch/wordpress": "*",
-    "composer/installers": "v1.0.12",
+    "johnpbloch/wordpress": "^5.2.2",
+    "composer/installers": "^1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "oscarotero/env": "^1.0",
     "wp-cli/wp-cli-bundle" : "*",
     "wp-cli/profile-command": "^0.3.0",
     "koodimonni/composer-dropin-installer": "*",
-    "koodimonni-language/fi": "*",
-    "wpackagist-theme/twentyseventeen": "*",
-    "humanmade/s3-uploads": "*"
+    "koodimonni-language/hu_hu": "*",
+    "humanmade/s3-uploads": "*",
+    "wpackagist-plugin/sendgrid-email-delivery-simplified": "^1.11",
+    "wpackagist-plugin/all-in-one-seo-pack": "^3.1",
+    "wpackagist-plugin/cloudflare": "^3.3",
+    "wpackagist-plugin/two-factor": "^0.4.7",
+    "wpackagist-plugin/disable-wordpress-updates": "^1.6",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.9",
+    "wpackagist-plugin/user-role-editor": "^4.51.2",
+    "wpackagist-theme/supermag": "^2.0",
+    "wpackagist-plugin/social-pug": "^1.6"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*",
@@ -45,7 +53,8 @@
     "installer-paths": {
       "htdocs/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "htdocs/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "htdocs/wp-content/themes/{$name}": ["type:wordpress-theme"]
+      "htdocs/wp-content/themes/{$name}": ["type:wordpress-theme"],
+      "htdocs/wp-content/{$name}": ["type:wordpress-dropin"]
     },
     "dropin-paths": {
       "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
